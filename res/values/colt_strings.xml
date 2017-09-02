@@ -359,6 +359,16 @@
     <string name="allow_signature_fake">Allow signature spoofing</string>
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string> 
 
+    <!-- Alarm blocker -->
+    <string name="alarm_blocker">Alarm blocker</string>
+    <string name="alarm_blocker_title">Enable</string>
+    <string name="alarm_blocker_summary">Block alarms while screen off</string>
+    <string name="alarm_blocker_save">Save</string>
+    <string name="alarm_list_header">Available alarms</string>
+    <string name="alarm_blocker_reload">Reload</string>
+    <string name="alarm_blocker_warning_title">Proceed with caution</string>
+    <string name="alarm_blocker_warning">Blocking alarms have the potential to cause instability, crashes or data loss.</string>
+
 <!-- Lock Screen settings panel-->
     <string name="lockscreen_settings_title">Lockscreen Preferences</string>
     <!--tabs strings-->
