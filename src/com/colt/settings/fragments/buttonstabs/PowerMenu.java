@@ -37,25 +37,36 @@ import com.android.settings.Utils;
 public class PowerMenu extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+     private static final String KEY_POWERMENU_TORCH = "powermenu_torch";
+     private SwitchPreference mPowermenuTorch;
 
-        addPreferencesFromResource(R.xml.power_menu);
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+         addPreferencesFromResource(R.xml.power_menu);
+         final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+         mPowermenuTorch = (SwitchPreference) findPreference(KEY_POWERMENU_TORCH);
+        mPowermenuTorch.setOnPreferenceChangeListener(this);
+        if (!Utils.deviceSupportsFlashLight(getActivity())) {
+            prefScreen.removePreference(mPowermenuTorch);
+        } else {
+        mPowermenuTorch.setChecked((Settings.System.getInt(resolver,
+                Settings.System.POWERMENU_TORCH, 0) == 1));
+        }
     }
-
-    @Override
+     @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mPowermenuTorch) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.POWERMENU_TORCH, value ? 1 : 0);
+            return true;
+        }
+        return false;
+    }
+     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
-    }
-
-}
+ }
