@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!-- Copyright (C) 2017-18 ColtOS Project
+ 
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+ 
+           http://www.apache.org/licenses/LICENSE-2.0
+ 
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+ -->
+ <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+ 
+    <!-- Categories -->
+    <string name="colt_settings_title">Colt\'s Hub</string>
+	
+    <!-- Statusbar Settings panel -->
+	<string name="statusbar_settings_title">Status Bar</string>
+	<!--tabs strings-->
+	<string name="statusbar_misc_title">Statusbar Misc</string>
+	<string name="network_traffic_title">Network Traffic</string>
+	<string name="battery_icon_title">Battery Icon</string>
+	<string name="clock_options_title">Clock Options</string>
+	<!--features strings-->
+	
+    <!-- Quick Settings panel -->
+	<string name="quick_settings_title">Quick Settings</string>
+	<!--tabs strings-->
+	<string name="quicksettings_title">QS Options</string>
+	<!--features strings-->
+	
+	<!-- Recents Settings panel -->
+	<string name="recents_settings_title">Recents Apps</string>
+	<!--tabs strings-->
+	<string name="stock_recents_title">Recents UI</string>
+	<!--features strings-->
+	
+	<!-- Buttons Settings panel -->
+	<string name="buttons_settings_title">Hardware Buttons</string>
+	<!--tabs strings-->
+	<string name="power_menu_title">Power Menu</string>
+	<string name="hardware_keys_title">Hardware Keys</string>
+	<string name="volume_tab_title">Volume Rocker</string>
+	<!--features strings-->
+	
+	<!-- Navbar Settings panel -->
+	<string name="navbar_settings_title">Navbar Buttons</string>
+	<!--tabs strings-->
+	<string name="navbar_tab_title">Navbar</string>
+	<!--features strings-->
+	
+	<!-- Notification settings panel -->
+	<string name="notification_settings_title">Notification Settings</string>
+	<!--tabs strings-->
+	<string name="notification_tab_title">Notifications</string>
+	<!--features strings-->
+	
+	<!-- Lock Screen -->
+	<string name="lockscreen_settings_title">Lockscreen Preferences</string>
+	<!--tabs strings-->
+	<string name="lock_screen_title">Lockscreen Options</string>
+	<string name="weather_settings_title">Lockscreen Weather</string>
+	<!--features strings-->
+	
+	<!-- Colt Decorators-->
+	<string name="decorators_settings_title">Colt Decorators</string>
+	<!--tabs strings-->
+	<string name="colt_themes_title">Colt Themes</string>
+	<string name="animations_settings_title">Animations</string>
+	<string name="battery_bar_title">Battery Bar</string>
+	<!--features strings-->
+	
+	<!-- About ColtOS -->
+	<string name="colt_about_title">About ColtOS</string>
+	<!--tabs strings-->
+	<string name="about_colt_title">About ColtOS</string>
+	<string name="team_colt_title">Team Colt</string>
+	<string name="maintainers_colt_title">Device Maintainers</string>
+	<string name="changelog_colt_title">Changelog</string>
+	
+	<!--features strings-->
+    <string name="share_colt_title">Share ColtOS</string>
+    <string name="share_colt_summary">Spread ColtOS</string>
+    <string name="share_message">Check out Our ColtOS  @ https://plus.google.com/u/2/communities/102067248475500399675</string>
+    <string name="share_chooser_title">Share ColtOS</string>
+    <string name="colt_source_title">Github</string>
+    <string name="colt_source_summary">Visit our source git team</string>
+    <string name="colt_google_plus_title">Google+</string>
+    <string name="colt_google_plus_summary">Visit our G+ page for support and news</string>
+    <!-- Changelog -->
+    <string name="changelog_colt_title">Changelog</string>
+    <string name="changelog_colt_error">Unable to load changelog</string>
+    <string name="changelog_colt_summary">Lets see what we have changed recently in ROM</string>
+		
+	<!--Tabs Summaries-->
+    <string name="status_bar_summary">Tweak Statusbar to make it even better</string>
+    <string name="quick_settings_summary">An exclusive tab for beautiful QS</string>
+    <string name="recents_settings_summary">Best way to quick Multitasking</string>
+	<string name="buttons_settings_summary">Configure devices Hardware keys</string>
+    <string name="navbar_settings_summary">Change the style of Navbar</string>
+	<string name="notification_settings_summary">Notification panel features</string>
+    <string name="lockscreen_settings_summary">Manage your Lockscreen items</string>   
+    <string name="decorators_settings_summary">A Special decorator tab</string>
+    <string name="colt_about_summary">Get to know about us</string>
+	
+	<!--End-->
+	

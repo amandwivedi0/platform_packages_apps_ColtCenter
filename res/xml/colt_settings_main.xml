@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2017-18 ColtOS Project
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+	android:title="@string/colt_settings_title" >
+
+        <!-- Statusbar Settings panel -->
+		<PreferenceScreen
+            android:fragment="com.colt.settings.tabs.StatusbarSettingsTabs"
+            android:key="colt_statusbar_settings"
+			android:icon="@drawable/ic_colts_statusbar"
+			android:title="@string/statusbar_settings_title"
+            android:summary="@string/status_bar_summary"/>
+       
+        <!-- Quick Settings panel -->
+        <PreferenceScreen
+			android:fragment="com.colt.settings.tabs.QuickSettingsTabs"
+            android:key="colt_quick_settings"
+			android:icon="@drawable/ic_colts_quicksettings"
+            android:title="@string/quick_settings_title"
+            android:summary="@string/quick_settings_summary"/>
+
+        <!-- Recents Settings panel -->
+        <PreferenceScreen
+			android:fragment="com.colt.settings.tabs.RecentsSettingsTabs"
+            android:key="colt_recents_settings"
+			android:icon="@drawable/ic_colts_recents"         
+            android:title="@string/recents_settings_title"
+            android:summary="@string/recents_settings_summary"/>
+			
+        <!-- Buttons Settings panel -->
+        <PreferenceScreen
+            android:fragment="com.colt.settings.tabs.ButtonsSettingsTabs"
+            android:key="colt_buttons_settings"         
+            android:icon="@drawable/ic_colts_buttons"
+            android:title="@string/buttons_settings_title"
+			android:summary="@string/buttons_settings_summary"/>
+			
+		<!-- Navbar Settings panel -->
+        <PreferenceScreen
+			android:fragment="com.colt.settings.tabs.NavbarSettingsTabs"
+            android:key="colt_navbar_settings"
+			android:icon="@drawable/ic_colts_navbar"
+			android:title="@string/navbar_settings_title" 
+            android:summary="@string/navbar_settings_summary"/>
+			
+		<!-- Notification settings panel -->
+		<PreferenceScreen
+            android:fragment="com.colt.settings.tabs.NotificationsSettingsTabs"
+            android:key="colt_notification_settings"
+			android:icon="@drawable/ic_colts_notification"
+			android:title="@string/notification_settings_title"
+            android:summary="@string/notification_settings_summary"/>	
+	
+		<!-- Lock Screen -->
+		<PreferenceScreen
+            android:fragment="com.colt.settings.tabs.LockscreenSettingsTabs"
+            android:key="colt_lockscreen_settings"
+			android:icon="@drawable/ic_colts_lockscreen"
+			android:title="@string/lockscreen_settings_title"
+            android:summary="@string/lockscreen_settings_summary"/>
+
+		<!-- Colt Decorators-->
+		<PreferenceScreen
+            android:fragment="com.colt.settings.tabs.DecoratorsSettingsTabs"
+            android:key="colt_decorators_settings"
+			android:icon="@drawable/ic_colts_decorators"
+			android:title="@string/decorators_settings_title"
+            android:summary="@string/decorators_settings_summary"/>
+
+		<!-- About ColtOS -->
+		<PreferenceScreen
+			android:fragment="com.colt.settings.tabs.AboutSettingsTabs"
+            android:key="colt_about_settings"
+			android:icon="@drawable/ic_colts_about"
+            android:title="@string/colt_about_title"
+            android:summary="@string/colt_about_summary"/>
+
+</PreferenceScreen>
