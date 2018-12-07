@@ -212,6 +212,10 @@
     <string name="volume_key_cursor_control_off">Disabled</string>
     <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
     <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
+
+    <!-- Power menu on secure lockscreen -->
+    <string name="powermenu_lockscreen_title">Lockscreen visibility</string>
+    <string name="powermenu_lockscreen_summary">Enable the ability to show and use the power menu dialog while on the lockscreen</string>
 	 
 <!-- Navbar Settings panel -->
 	<string name="navbar_settings_title">Navbar Buttons</string>
