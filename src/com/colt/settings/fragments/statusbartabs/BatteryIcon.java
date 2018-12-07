@@ -29,7 +29,7 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class StatusBarBattery extends SettingsPreferenceFragment implements
+public class BatteryIcon extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";

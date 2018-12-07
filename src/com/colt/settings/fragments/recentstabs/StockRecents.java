@@ -39,7 +39,7 @@ import java.util.HashSet;
 import com.android.internal.util.colt.ColtUtils;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class RecentsSettings extends SettingsPreferenceFragment implements
+public class StockRecents extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
