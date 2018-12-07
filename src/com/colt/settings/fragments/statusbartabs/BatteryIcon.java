@@ -16,46 +16,48 @@
 
 package com.colt.settings.fragments.statusbartabs;
 
-import android.content.Context;
 import android.content.ContentResolver;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
-
-import com.android.settings.R;
+import android.provider.Settings;
+ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.Utils;
-
-public class BatteryIcon extends SettingsPreferenceFragment implements
+ public class StatusBarBattery extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-
-    @Override
+     private static final String SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
+     private ListPreference mStatusBarBatteryShowPercent;
+     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        addPreferencesFromResource(R.xml.battery_icon);
+         addPreferencesFromResource(R.xml.battery_icon);
+         ContentResolver resolver = getActivity().getContentResolver();
+         mStatusBarBatteryShowPercent =
+                (ListPreference) findPreference(SHOW_BATTERY_PERCENT);
+         int batteryShowPercent = Settings.System.getInt(resolver,
+                Settings.System.SHOW_BATTERY_PERCENT, 0);
+        mStatusBarBatteryShowPercent.setValue(String.valueOf(batteryShowPercent));
+        mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
+        mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
     }
-
-    @Override
+     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.COLT;
+        return MetricsEvent.COLT;
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
+     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mStatusBarBatteryShowPercent) {
+            int batteryShowPercent = Integer.valueOf((String) newValue);
+            int index = mStatusBarBatteryShowPercent.findIndexOfValue((String) newValue);
+            Settings.System.putInt(
+                    resolver, Settings.System.SHOW_BATTERY_PERCENT, batteryShowPercent);
+            mStatusBarBatteryShowPercent.setSummary(
+                    mStatusBarBatteryShowPercent.getEntries()[index]);
+            return true;
+        }
+        return false;
     }
-
 }
