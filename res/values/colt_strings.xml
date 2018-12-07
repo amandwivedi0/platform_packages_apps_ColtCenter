@@ -176,12 +176,16 @@
 
 	<string name="lock_screen_title">Lockscreen Options</string>
 	<string name="weather_settings_title">Lockscreen Weather</string>
-	<!--features strings-->
-   
+	<!--features strings-->   
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
     <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
-	
+    <!-- Double Tap -->
+    <string name="dtts_category_header">Double tap to sleep</string>
+    <!-- Double Tap Lockscreen to Sleep -->
+    <string name="double_tap_to_sleep_lockscreen_title">Lockscreen</string>
+    <string name="double_tap_to_sleep_lockscreen_summary">Double tap on the top third or bottom shortcut area of the lock screen to put the device to sleep</string>
+
 <!-- Colt Decorators-->
 	<string name="decorators_settings_title">Colt Decorators</string>
 	<!--tabs strings-->
