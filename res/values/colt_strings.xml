@@ -106,6 +106,10 @@
         <string name="backlight_timeout_15s">15 sec</string>
         <string name="backlight_timeout_20s">20 sec</string>
         <string name="backlight_timeout_30s">30 sec</string>
+
+        <!-- ANBI -->
+     	<string name="anbi_title">Accidental touch</string>
+     	<string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
 	
     <!-- Navbar Settings panel -->
 	<string name="navbar_settings_title">Navbar Buttons</string>
@@ -185,9 +189,5 @@
     	<string name="hex_hint">#ff000000</string>
     	<string name="set">Set</string>
     	<string name="color_default">Default</string>
-
-   <!-- ANBI -->
-     <string name="anbi_title">Accidental touch</string>
-     <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
 
  </resources>
