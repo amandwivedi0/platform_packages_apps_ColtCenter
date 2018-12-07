@@ -133,7 +133,12 @@
 	<!--tabs strings-->
 	<string name="notification_tab_title">Notifications</string>
 	<!--features strings-->
-	
+	<!-- Incall vibrate options -->
+    <string name="incall_vibration_category">In-call vibration options</string>
+    <string name="incall_vibrate_connect_title">Vibrate on connect</string>
+    <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
+    <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+
 <!-- Lock Screen settings panel-->
 	<string name="lockscreen_settings_title">Lockscreen Preferences</string>
 	<!--tabs strings-->
