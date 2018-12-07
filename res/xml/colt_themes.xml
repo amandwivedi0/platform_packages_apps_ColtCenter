@@ -17,5 +17,14 @@
     android:layout="@layout/colt_tabs"
     android:title="@string/colt_themes_title">
 
+    <Preference
+          android:key="omni_theme_select_activity"
+          android:title="@string/colt_theme_select_title"
+          android:summary="@string/colt_theme_select_summary"
+          android:persistent="false" >
+          <intent android:action="android.intent.action.MAIN"
+                  android:targetPackage="org.omnirom.omnistyle"
+                  android:targetClass="org.omnirom.omnistyle.BrowseThemesActivity" />
+     </Preference>
 
 </PreferenceScreen>
