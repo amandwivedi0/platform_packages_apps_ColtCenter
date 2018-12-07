@@ -108,7 +108,9 @@
     <string name="recents_component_type_title">Recents Style</string>
     <string name="recents_pie">Pie</string>
     <string name="recents_oreo">Oreo</string>
-	
+    <!-- Dumb Dev -->
+    <string name="dumb_dev">This options are only meant to work with old rcents(Oreo recents). Please remove Quickstep to Enjoy these tweaks.</string>
+
 <!-- Buttons Settings panel -->
 	<string name="buttons_settings_title">Hardware Buttons</string>
 	<!--tabs strings-->
