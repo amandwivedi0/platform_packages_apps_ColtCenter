@@ -17,5 +17,10 @@
     android:layout="@layout/colt_tabs"
     android:title="@string/quicksettings_title">
 
+<com.colt.settings.preferences.GlobalSettingSwitchPreference
+             android:key="show_cpu_overlay"
+             android:title="@string/show_cpu_info"
+             android:summary="@string/show_cpu_info_summary" 
+             android:defaultValue="false" />
 
 </PreferenceScreen>
