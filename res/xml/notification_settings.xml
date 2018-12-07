@@ -15,6 +15,12 @@
     android:layout="@layout/colt_tabs"
     android:title="@string/notification_tab_title" >  
 
+    <!-- Heads up -->
+    <Preference
+         android:key="heads_up_notifications"
+         android:title="@string/heads_up_notifications"
+         android:fragment="com.colt.settings.fragments.notificationtabs.HeadsUpSettings" />
+		 
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
