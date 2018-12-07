@@ -116,6 +116,7 @@
 	<!--tabs strings-->
 	<string name="navbar_tab_title">Navbar</string>
 	<!--features strings-->
+	<string name="navbar_visibility">Allow navigation bar</string>
 	
     <!-- Notification settings panel -->
 	<string name="notification_settings_title">Notification Settings</string>
