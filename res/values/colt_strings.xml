@@ -72,6 +72,14 @@
     <string name="qstile_circle_trim">Circle with trim</string>
     <string name="qstile_dual_tone_circle">Dual-toned circle</string>
     <string name="qstile_squircle_trim">Squircle with trim</string>
+    <!-- Quick pull down-->
+    <string name="quick_pulldown_title">Quick pulldown</string>
+    <string name="quick_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>
+    <string name="quick_pulldown_summary_always">Always show Quick Settings on status bar pulldown</string>
+    <string name="quick_pulldown_off">Off</string>
+    <string name="quick_pulldown_left">Left</string>
+    <string name="quick_pulldown_right">Right</string>
+    <string name="quick_pulldown_always">Always</string>
 	
 <!-- Recents Settings panel -->
 	<string name="recents_settings_title">Recents Apps</string>
