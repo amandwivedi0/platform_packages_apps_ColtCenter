@@ -18,7 +18,7 @@
     <!-- Categories -->
     <string name="colt_settings_title">Colt\'s Hub</string>
 	
-    <!-- Statusbar Settings panel -->
+<!-- Statusbar Settings panel -->
 	<string name="statusbar_settings_title">Status Bar</string>
 	<!--tabs strings-->
 	<string name="statusbar_misc_title">Statusbar Misc</string>
@@ -27,19 +27,29 @@
 	<string name="clock_options_title">Clock Options</string>
 	<!--features strings-->
 	
-    <!-- Quick Settings panel -->
+<!-- Quick Settings panel -->
 	<string name="quick_settings_title">Quick Settings</string>
 	<!--tabs strings-->
 	<string name="quicksettings_title">QS Options</string>
 	<!--features strings-->
 	
-    <!-- Recents Settings panel -->
+<!-- Recents Settings panel -->
 	<string name="recents_settings_title">Recents Apps</string>
 	<!--tabs strings-->
 	<string name="stock_recents_title">Recents UI</string>
 	<!--features strings-->
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">Clear all button</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button</string>
+    <string name="recents_clear_all_location_title">Clear all location</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_top_center">Top center</string>
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
 	
-    <!-- Buttons Settings panel -->
+<!-- Buttons Settings panel -->
 	<string name="buttons_settings_title">Hardware Buttons</string>
 	<!--tabs strings-->
 	<string name="power_menu_title">Power Menu</string>
@@ -47,84 +57,84 @@
 	<string name="volume_tab_title">Volume Rocker</string>
 	<!--features strings-->
 
-        <!-- Power Menu -->
-    	<string name="powermenu_title">Power menu</string>
-    	<string name="powermenu_screenshot">Screenshot</string>
-    	<string name="powermenu_power">Power</string>
-    	<string name="powermenu_restart">Restart</string>
-    	<string name="powermenu_restart_recovery">Advanced restart</string>
-    	<string name="powermenu_airplane">Airplane</string>
-    	<string name="powermenu_settings">Settings</string>
-    	<string name="powermenu_lockdown">Lock Down</string>
-    	<string name="powermenu_users">Users</string>
-    	<string name="powermenu_logout">Logout</string>
+    <!-- Power Menu -->
+    <string name="powermenu_title">Power menu</string>
+    <string name="powermenu_screenshot">Screenshot</string>
+    <string name="powermenu_power">Power</string>
+    <string name="powermenu_restart">Restart</string>
+    <string name="powermenu_restart_recovery">Advanced restart</string>
+    <string name="powermenu_airplane">Airplane</string>
+    <string name="powermenu_settings">Settings</string>
+    <string name="powermenu_lockdown">Lock Down</string>
+    <string name="powermenu_users">Users</string>
+    <string name="powermenu_logout">Logout</string>
 	<string name="powermenu_torch">Flashlight</string>
 
 	<!-- HW Keys customization -->
-     	<string name="action_value_default_action" translatable="false">default</string>
-     	<string name="action_value_select_app" translatable="false">app</string>
-     	<string name="action_value_custom_action" translatable="false">custom</string>
-     	<string name="action_value_back" translatable="false">task_back</string>
-     	<string name="action_value_home" translatable="false">task_home</string>
-     	<string name="action_value_search_assist" translatable="false">task_assist</string>
-     	<string name="action_value_recent_apps" translatable="false">task_recents</string>
-     	<string name="action_value_voice_search" translatable="false">task_voice_search</string>
-     	<string name="action_value_menu" translatable="false">task_menu</string>
-     	<string name="picker_activities">Activities</string>
-     	<string name="select_custom_app_title">Select custom app</string>
-     	<string name="select_custom_activity_title">Select custom activity</string>
-     	<string name="profile_applist_title">Applications</string>
-     	<string name="choose_action_title">Choose action</string>
-     	<string name="action_entry_default_action">Default settings</string>
-     	<string name="action_entry_select_app">Select application</string>
-     	<string name="action_entry_custom_action">Select custom action</string>
-     	<string name="hardware_keys_home_key_title">Home button</string>
-     	<string name="hardware_keys_menu_key_title">Menu button</string>
-     	<string name="hardware_keys_assist_key_title">Search button</string>
-     	<string name="hardware_keys_appswitch_key_title">Overview button</string>
-     	<string name="hardware_keys_back_key_title">Back button</string>
-     	<string name="hardware_keys_double_tap_summary">Set double tap action</string>
-     	<string name="hardware_keys_single_tap_summary">Set single tap action</string>
-     	<string name="hardware_keys_long_press_summary">Set long press action</string>
-     	<string name="hardware_keys_single_tap_title">Single tap action</string>
-     	<string name="hardware_keys_long_press_title">Long press action</string>
-     	<string name="hardware_keys_double_tap_title">Double tap action</string>
-     	<string name="hardware_keys_category">Hardware Options</string>
-     	<string name="hardware_keys_disable_title">Disable keys</string>
-    	<!-- Enable keys backlight-->
-        <string name="button_brightness_title">Backlight</string>
-     	<string name="button_brightness_sw_title">Enable backlight</string>
-     	<string name="button_backlight_on_touch_only_title">Button touch</string>
-     	<string name="button_backlight_on_touch_only_summary">Enable backlight with timeout only on button touch</string>
+    <string name="action_value_default_action" translatable="false">default</string>
+    <string name="action_value_select_app" translatable="false">app</string>
+    <string name="action_value_custom_action" translatable="false">custom</string>
+    <string name="action_value_back" translatable="false">task_back</string>
+    <string name="action_value_home" translatable="false">task_home</string>
+    <string name="action_value_search_assist" translatable="false">task_assist</string>
+    <string name="action_value_recent_apps" translatable="false">task_recents</string>
+    <string name="action_value_voice_search" translatable="false">task_voice_search</string>
+    <string name="action_value_menu" translatable="false">task_menu</string>
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_app_title">Select custom app</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
+    <string name="profile_applist_title">Applications</string>
+    <string name="choose_action_title">Choose action</string>
+    <string name="action_entry_default_action">Default settings</string>
+    <string name="action_entry_select_app">Select application</string>
+    <string name="action_entry_custom_action">Select custom action</string>
+    <string name="hardware_keys_home_key_title">Home button</string>
+    <string name="hardware_keys_menu_key_title">Menu button</string>
+    <string name="hardware_keys_assist_key_title">Search button</string>
+    <string name="hardware_keys_appswitch_key_title">Overview button</string>
+    <string name="hardware_keys_back_key_title">Back button</string>
+    <string name="hardware_keys_double_tap_summary">Set double tap action</string>
+    <string name="hardware_keys_single_tap_summary">Set single tap action</string>
+    <string name="hardware_keys_long_press_summary">Set long press action</string>
+    <string name="hardware_keys_single_tap_title">Single tap action</string>
+    <string name="hardware_keys_long_press_title">Long press action</string>
+    <string name="hardware_keys_double_tap_title">Double tap action</string>
+    <string name="hardware_keys_category">Hardware Options</string>
+    <string name="hardware_keys_disable_title">Disable keys</string>
+    <!-- Enable keys backlight-->
+    <string name="button_brightness_title">Backlight</string>
+    <string name="button_brightness_sw_title">Enable backlight</string>
+    <string name="button_backlight_on_touch_only_title">Button touch</string>
+    <string name="button_backlight_on_touch_only_summary">Enable backlight with timeout only on button touch</string>
 
-        <!-- Buttons backlight timeout -->
-        <string name="backlight_timeout_title">Buttons backlight timeout</string>
-        <string name="backlight_timeout_on">Enabled always</string>
-        <string name="backlight_timeout_3s">3 sec</string>
-        <string name="backlight_timeout_default">5 sec (default)</string>
-        <string name="backlight_timeout_10s">10 sec</string>
-        <string name="backlight_timeout_15s">15 sec</string>
-        <string name="backlight_timeout_20s">20 sec</string>
-        <string name="backlight_timeout_30s">30 sec</string>
+    <!-- Buttons backlight timeout -->
+    <string name="backlight_timeout_title">Buttons backlight timeout</string>
+    <string name="backlight_timeout_on">Enabled always</string>
+    <string name="backlight_timeout_3s">3 sec</string>
+    <string name="backlight_timeout_default">5 sec (default)</string>
+    <string name="backlight_timeout_10s">10 sec</string>
+    <string name="backlight_timeout_15s">15 sec</string>
+    <string name="backlight_timeout_20s">20 sec</string>
+    <string name="backlight_timeout_30s">30 sec</string>
 
-        <!-- ANBI -->
-     	<string name="anbi_title">Accidental touch</string>
-     	<string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
+    <!-- ANBI -->
+    <string name="anbi_title">Accidental touch</string>
+    <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
 	
-    <!-- Navbar Settings panel -->
+<!-- Navbar Settings panel -->
 	<string name="navbar_settings_title">Navbar Buttons</string>
 	<!--tabs strings-->
 	<string name="navbar_tab_title">Navbar</string>
 	<!--features strings-->
 	<string name="navbar_visibility">Allow navigation bar</string>
 	
-    <!-- Notification settings panel -->
+<!-- Notification settings panel -->
 	<string name="notification_settings_title">Notification Settings</string>
 	<!--tabs strings-->
 	<string name="notification_tab_title">Notifications</string>
 	<!--features strings-->
 	
-    <!-- Lock Screen -->
+<!-- Lock Screen settings panel-->
 	<string name="lockscreen_settings_title">Lockscreen Preferences</string>
 	<!--tabs strings-->
 
@@ -132,23 +142,23 @@
 	<string name="weather_settings_title">Lockscreen Weather</string>
 	<!--features strings-->
    
-        <!-- Lockscreen battery info indicator  -->
-    	<string name="lockscreen_battery_info_title">Lockscreen charging info</string>
-    	<string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
 	
-    <!-- Colt Decorators-->
+<!-- Colt Decorators-->
 	<string name="decorators_settings_title">Colt Decorators</string>
 	<!--tabs strings-->
 	<string name="colt_themes_title">Colt Themes</string>
 	<string name="animations_settings_title">Animations</string>
 	<string name="battery_bar_title">Battery Bar</string>
 	<!--features strings-->
-        <!-- Omni Themes -->
-    	<string name="colt_theme_select_title">Themes</string>
-    	<string name="omni_theme_select_none">Disabled</string>
-    	<string name="colt_theme_select_summary">Browse and select installed colt themes (Thanks to Omni)</string>
+    <!-- Omni Themes -->
+    <string name="colt_theme_select_title">Themes</string>
+    <string name="omni_theme_select_none">Disabled</string>
+    <string name="colt_theme_select_summary">Browse and select installed colt themes (Thanks to Omni)</string>
 	
-    <!-- About ColtOS -->
+<!-- About ColtOS -->
 	<string name="colt_about_title">About ColtOS</string>
 	<!--tabs strings-->
 	<string name="about_colt_title">About ColtOS</string>
@@ -158,44 +168,44 @@
 	
 	<!--features strings-->
 	<string name="share_colt_title">Share ColtOS</string>
-    	<string name="share_colt_summary">Spread ColtOS</string>
-    	<string name="share_message">Check out Our ColtOS  @ https://plus.google.com/u/2/communities/102067248475500399675</string>
-    	<string name="share_chooser_title">Share ColtOS</string>
-    	<string name="colt_source_title">Github</string>
-    	<string name="colt_source_summary">Visit our source git team</string>
-    	<string name="colt_google_plus_title">Google+</string>
-    	<string name="colt_google_plus_summary">Visit our G+ page for support and news</string>
-    	<!-- Changelog -->
-    	<string name="changelog_colt_title">Changelog</string>
-    	<string name="changelog_colt_error">Unable to load changelog</string>
-    	<string name="changelog_colt_summary">Lets see what we have changed recently in ROM</string>
+    <string name="share_colt_summary">Spread ColtOS</string>
+    <string name="share_message">Check out Our ColtOS  @ https://plus.google.com/u/2/communities/102067248475500399675</string>
+    <string name="share_chooser_title">Share ColtOS</string>
+    <string name="colt_source_title">Github</string>
+    <string name="colt_source_summary">Visit our source git team</string>
+    <string name="colt_google_plus_title">Google+</string>
+    <string name="colt_google_plus_summary">Visit our G+ page for support and news</string>
+    <!-- Changelog -->
+    <string name="changelog_colt_title">Changelog</string>
+    <string name="changelog_colt_error">Unable to load changelog</string>
+    <string name="changelog_colt_summary">Lets see what we have changed recently in ROM</string>
 		
     <!--Tabs Summaries-->
-    	<string name="status_bar_summary">Tweak Statusbar to make it even better</string>
-    	<string name="quick_settings_summary">An exclusive tab for beautiful QS</string>
-    	<string name="recents_settings_summary">Best way to quick Multitasking</string>
+    <string name="status_bar_summary">Tweak Statusbar to make it even better</string>
+    <string name="quick_settings_summary">An exclusive tab for beautiful QS</string>
+    <string name="recents_settings_summary">Best way to quick Multitasking</string>
 	<string name="buttons_settings_summary">Configure devices Hardware keys</string>
-    	<string name="navbar_settings_summary">Change the style of Navbar</string>
+    <string name="navbar_settings_summary">Change the style of Navbar</string>
 	<string name="notification_settings_summary">Notification panel features</string>
-    	<string name="lockscreen_settings_summary">Manage your Lockscreen items</string>   
-    	<string name="decorators_settings_summary">A Special decorator tab</string>
-    	<string name="colt_about_summary">Get to know about us</string>
+    <string name="lockscreen_settings_summary">Manage your Lockscreen items</string>   
+    <string name="decorators_settings_summary">A Special decorator tab</string>
+    <string name="colt_about_summary">Get to know about us</string>
 	
 	<!-- Color Picker -->
-    	<string name="dialog_color_picker">Color Picker</string>
-    	<string name="press_color_to_apply">Press on color below to apply</string>
-    	<string name="arrow_right">→</string>
-    	<string name="arrow_down">↓</string>
-    	<string name="hex">Hex:</string>
-    	<string name="hex_hint">#ff000000</string>
-    	<string name="set">Set</string>
-    	<string name="color_default">Default</string>
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
 
-        <!-- Statusbar Tuner -->
-    	<string name="statusbar_items_title">Statusbar items</string>
-    	<!-- Lockscreen icons -->
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusbar items</string>
+    <!-- Lockscreen icons -->
    	<string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
-    	<!-- Navbar tuner -->
+    <!-- Navbar tuner -->
    	<string name="navbar_tuner_title">Navbar buttons</string>
 
  </resources>
