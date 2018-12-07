@@ -16,46 +16,39 @@
 
 package com.colt.settings.fragments.lockscreentabs;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.ContentResolver;
-import android.content.res.Resources;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
 
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.Utils;
+//import com.android.settings.development.DevelopmentSettings;
+import com.android.settings.SettingsPreferenceFragment;
 
-public class LockscreenMisc extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+import com.colt.settings.R;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+public class LockScreenSettings extends SettingsPreferenceFragment {
+
+	public static final String TAG = "LockScreenSettings";
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+    	    super.onCreate(savedInstanceState);
+
+        Context mContext = getActivity().getApplicationContext();
 
         addPreferencesFromResource(R.xml.lockscreen_misc);
-    }
+	}
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.COLT;
+	return MetricsProto.MetricsEvent.COLT;
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
-    }
-
 }

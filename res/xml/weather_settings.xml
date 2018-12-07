@@ -18,9 +18,11 @@
     android:title="@string/weather_settings_title">
 
 <PreferenceCategory
-         android:key="weather_lockscreen_key"
-         android:title="@string/weather_title" >
-          <com.colt.settings.preferences.SystemSettingListPreference
+             android:key="weather_lockscreen_key"
+             android:title="@string/weather_title"
+		     settings:controller="com.colt.settings.fragments.WeatherPreferenceController">
+		 
+<com.colt.settings.preferences.SystemSettingListPreference
              android:key="weather_lockscreen_unit"
              android:dialogTitle="@string/weather_unit"
              android:title="@string/weather_unit"
