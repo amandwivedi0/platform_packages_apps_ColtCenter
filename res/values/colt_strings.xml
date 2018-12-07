@@ -88,7 +88,10 @@
     <string name="smart_pulldown_none">no notifications</string>
     <string name="smart_pulldown_dismissable">no dismissable</string>
     <string name="smart_pulldown_ongoing">no ongoing</string>
-	
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>	
+
 <!-- Recents Settings panel -->
 	<string name="recents_settings_title">Recents Apps</string>
 	<!--tabs strings-->
