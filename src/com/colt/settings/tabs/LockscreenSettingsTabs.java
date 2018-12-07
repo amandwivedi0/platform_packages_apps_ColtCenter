@@ -31,8 +31,9 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.colt.settings.PagerSlidingTabStrip;
-import com.colt.settings.fragments.statusbartabs.LockscreenMisc;
-import com.colt.settings.fragments.statusbartabs.WeatherSettings;
+import com.colt.settings.fragments.lockscreentabs.LockscreenMisc;
+import com.colt.settings.fragments.lockscreentabs.WeatherSettings;
+import com.colt.settings.fragments.lockscreentabs.LockscreenWidgets;
 
 public class LockscreenSettingsTabs extends SettingsPreferenceFragment {
 
@@ -84,7 +85,8 @@ public class LockscreenSettingsTabs extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new LockscreenMisc();
-            frags[1] = new WeatherSettings();			
+			frags[1] = new LockscreenWidgets()
+            frags[2] = new WeatherSettings();			
         }
 
         @Override
@@ -107,7 +109,8 @@ public class LockscreenSettingsTabs extends SettingsPreferenceFragment {
         String titleString[];
         titleString = new String[]{
                 getString(R.string.lock_screen_title),
-                getString(R.string.weather_settings_title)
+                getString(R.string.weather_settings_title),
+				getString(R.string.widgets_settings_title)
 
 	};
         return titleString;
