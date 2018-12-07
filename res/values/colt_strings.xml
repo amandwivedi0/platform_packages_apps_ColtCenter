@@ -49,7 +49,10 @@
     <!-- Show VoLTE icon on statusbar -->
     <string name="volte_icon_title">VoLTE icon</string>
     <string name="volte_icon_summary">Display VoLTE icon</string>
-	
+	<!-- ADB debugging notifications -->
+    <string name="adb_notify">ADB notification</string>
+    <string name="adb_notify_summary">Display a notification when android debugging is enabled</string>
+	 
 <!-- Quick Settings panel -->
 	<string name="quick_settings_title">Quick Settings</string>
 	<!--tabs strings-->
