@@ -261,7 +261,20 @@
     <string name="navbar_tab_title">Navbar</string>
     <!--features strings-->
     <string name="navbar_visibility">Allow navigation bar</string>
-	
+
+   <!-- Edge gestures -->
+     <string name="edge_gestures_title">Edge gestures</string>
+     <string name="edge_gestures_feedback_duration_title">Haptic feedback duration</string>
+     <string name="edge_gestures_long_press_delay_title">Delay until long press action starts</string>
+     <string name="edge_gestures_back_category_title">Back gesture</string>
+     <string name="edge_gestures_back_edges_title">Trigger back gesture from</string>
+     <string name="edge_gestures_landscape_back_edges_title">Trigger back gesture on landscape from</string>
+     <string name="edge_gestures_back_screen_percent_title">Back gesture must start below this percentage of the screen</string>
+     <string name="edge_gestures_back_screen_percent_summary">Trigger below % of screen</string>
+     <string name="edge_gestures_summary">Navigate using edge gestures</string>
+     <string name="edge_gestures_back_show_ui_feedback_title">Back gesture animation</string>
+     <string name="edge_gestures_back_show_ui_feedback_summary">Show animated feedback on edges when back gesture is used</string>
+
 <!-- Notification settings panel -->
     <string name="notification_settings_title">Notification Settings</string>
     <!--tabs strings-->
@@ -322,6 +335,13 @@
     <string name="battery_light_medium_color">Medium battery</string>
     <string name="battery_light_full_color">Almost full battery</string>
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
+
+    <!-- Blink flashlight for incoming calls -->
+    <string name="flashlight_on_call_title">Blink Flashlight on call</string>
+    <string name="flashlight_on_call_disabled">Disabled</string>
+    <string name="flashlight_on_call_not_dnd">Blink flashlight only in ringer mode</string>
+    <string name="flashlight_on_call_dnd">Blink flashlight only in DND mode</string>
+    <string name="flashlight_on_call_always">Always blink flashlight</string>
 	 
 <!-- Lock Screen settings panel-->
     <string name="lockscreen_settings_title">Lockscreen Preferences</string>
@@ -528,39 +548,5 @@
     <string name="attention">Attention</string>
     <string name="unit_percent">\u0025</string>
     <string name="unit_x1000ms">x1000 ms</string>
-<<<<<<< HEAD
-  
-=======
 
-    <!-- Double tap-to-sleep -->
-     <string name="double_tap_to_sleep_title">Status bar</string>
-     <string name="double_tap_to_sleep_summary">Double-tap status bar to put the device to sleep</string>  
-
-    <!-- Clock options -->
-     <string name="clock_options_title">Clock options</string>
-     <string name="clock_options_summary">Customize the statusbar clock</string>
-    <!-- Status bar clock -->
-     <string name="status_bar_clock_title">Clock position</string>
-     <string name="status_bar_clock_hidden">Hidden</string>
-     <string name="status_bar_clock_right">Right side</string>
-     <string name="status_bar_clock_center">Centered</string>
-     <string name="status_bar_clock_left">Left side</string>
-     <string name="status_bar_clock_show_seconds_title">Show seconds</string>
-     <string name="status_bar_clock_show_am_pm_title">Show AM/PM</string>
-     <string name="status_bar_clock_show_day_title">Show day of the week</string>
-
-   <!-- Edge gestures -->
-     <string name="edge_gestures_title">Edge gestures</string>
-     <string name="edge_gestures_feedback_duration_title">Haptic feedback duration</string>
-     <string name="edge_gestures_long_press_delay_title">Delay until long press action starts</string>
-     <string name="edge_gestures_back_category_title">Back gesture</string>
-     <string name="edge_gestures_back_edges_title">Trigger back gesture from</string>
-     <string name="edge_gestures_landscape_back_edges_title">Trigger back gesture on landscape from</string>
-     <string name="edge_gestures_back_screen_percent_title">Back gesture must start below this percentage of the screen</string>
-     <string name="edge_gestures_back_screen_percent_summary">Trigger below % of screen</string>
-     <string name="edge_gestures_summary">Navigate using edge gestures</string>
-     <string name="edge_gestures_back_show_ui_feedback_title">Back gesture animation</string> 
-     <string name="edge_gestures_back_show_ui_feedback_summary">Show animated feedback on edges when back gesture is used</string>
-
->>>>>>> 498969c... Add edge gestures (2/2)
 </resources>
