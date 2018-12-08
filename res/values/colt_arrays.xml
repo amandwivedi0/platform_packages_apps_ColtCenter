@@ -81,7 +81,7 @@
          <item>2</item>
     </string-array>
 	
-	     <string-array name="entries_status_bar_battery" translatable="false">
+     <string-array name="entries_status_bar_battery" translatable="false">
          <item>@string/status_bar_battery_style_port</item>
          <item>@string/status_bar_battery_style_circle</item>
          <item>@string/battery_style_dotted_circle</item>
@@ -102,27 +102,35 @@
         <item>@string/qstile_circle_trim</item>
         <item>@string/qstile_dual_tone_circle</item>
         <item>@string/qstile_squircle_trim</item>
-		<item>@string/qstile_circle_gradient</item>
+	<item>@string/qstile_circle_gradient</item>
         <item>@string/qstile_wavey</item>
         <item>@string/qstile_circle_dualtone</item>
         <item>@string/qstile_pokesign</item>
         <item>@string/qstile_ninja</item>
         <item>@string/qstile_dottedcircle</item>
         <item>@string/qstile_attemptmountain</item>
-    </string-array>
+	<item>@string/qstile_squaremedo</item>
+	<item>@string/qstile_oreo</item>
+        <item>@string/qstile_oreo_circle_trim</item>
+        <item>@string/qstile_oreo_squircle_trim</item>
+     </string-array>
      <string-array name="qs_selector_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
-		<item>4</item>
+	<item>4</item>
         <item>5</item>
         <item>6</item>
         <item>7</item>
         <item>8</item>
         <item>9</item>
         <item>10</item>
-    </string-array>
+	<item>11</item>
+	<item>12</item>
+        <item>13</item>
+        <item>14</item> 
+   </string-array>
 	
 	<!-- Pie and Oreo recents -->
     <string-array name="recents_component_type_title_entries">
