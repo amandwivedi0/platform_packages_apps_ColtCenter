@@ -349,6 +349,10 @@
     <string name="flashlight_on_call_dnd">Blink flashlight only in DND mode</string>
     <string name="flashlight_on_call_always">Always blink flashlight</string>
 	 
+    <!-- Allow fake signature -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string> 
+
 <!-- Lock Screen settings panel-->
     <string name="lockscreen_settings_title">Lockscreen Preferences</string>
     <!--tabs strings-->
