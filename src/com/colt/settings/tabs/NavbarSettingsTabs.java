@@ -32,6 +32,7 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.colt.settings.PagerSlidingTabStrip;
 import com.colt.settings.fragments.navbartabs.Navbar;
+import com.colt.settings.fragments.navbartabs.EdgeGestures;
 
 public class NavbarSettingsTabs extends SettingsPreferenceFragment {
 
@@ -83,6 +84,7 @@ public class NavbarSettingsTabs extends SettingsPreferenceFragment {
         public NavBarAdapter(FragmentManager fm) {
             super(fm);
            frags[0] = new NavbarSettings();
+           frags[1] = new EdgeGestures();
         }
 
         @Override
@@ -104,7 +106,8 @@ public class NavbarSettingsTabs extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                getString(R.string.navbar_tab_title)
+                getString(R.string.navbar_tab_title),
+                getString(R.string.edge_gestures_title)
 		};
         return titleString;
     }
