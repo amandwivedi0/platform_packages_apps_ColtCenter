@@ -29,6 +29,7 @@ public class EdgeGesturesSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState); 
  
         addPreferencesFromResource(R.xml.edge_gestures); 
+        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.gesture_settings_info);
  
         enabledPreference = (SwitchPreference) findPreference(EDGE_GESTURES_ENABLED); 
         /*enabledPreference.setChecked((Settings.System.getInt(getContentResolver(), 

@@ -79,4 +79,10 @@
 
     </PreferenceCategory>
 
+     <com.colt.settings.preferences.SystemSettingSwitchPreference
+        android:key="use_bottom_gesture_navigation"
+        android:title="@string/gesture_settings_title"
+        android:summary="@string/gesture_settings_summary"
+        android:defaultValue="false" /
+
 </PreferenceScreen>
