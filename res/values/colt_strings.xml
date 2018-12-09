@@ -169,6 +169,10 @@
      <!-- Dumb Dev -->
      <string name="dumb_dev">This options are only meant to work with old rcents(Oreo recents). Please remove Quickstep to Enjoy these tweaks.</string>
 
+     <!-- Recents Membar --> 
+     <string name="systemui_recents_mem_display_title">Show Memory Bar</string> 
+     <string name="systemui_recents_mem_display_summary">Enable Disable Ram bar in recent app view</string> 
+
 <!-- Buttons Settings panel -->
      <string name="buttons_settings_title">Hardware Buttons</string>
      <!--tabs strings-->
