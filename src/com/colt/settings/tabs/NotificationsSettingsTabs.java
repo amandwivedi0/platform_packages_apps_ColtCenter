@@ -31,7 +31,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.colt.settings.PagerSlidingTabStrip;
-import com.colt.settings.fragments.notificationtabs.NotificationSettiings;
+import com.colt.settings.fragments.notificationtabs.NotificationSettings;
 
 public class NotificationsSettingsTabs extends SettingsPreferenceFragment {
 

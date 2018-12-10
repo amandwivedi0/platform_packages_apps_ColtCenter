@@ -13,7 +13,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment; 
 import com.colt.settings.preferences.SecureSettingSeekBarPreference; 
  
-public class EdgeGesturesSettings extends SettingsPreferenceFragment implements 
+public class EdgeGestures extends SettingsPreferenceFragment implements 
         Preference.OnPreferenceChangeListener { 
  
     public static final String EDGE_GESTURES_ENABLED = "edge_gestures_enabled"; 

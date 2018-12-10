@@ -67,7 +67,6 @@
     <string name="double_tap_to_sleep_summary">Double-tap status bar to put the device to sleep</string>  
 
     <!-- Clock options -->
-     <string name="clock_options_title">Clock options</string>
      <string name="clock_options_summary">Customize the statusbar clock</string>
     <!-- Status bar clock -->
      <string name="status_bar_clock_title">Clock position</string>
@@ -632,7 +631,6 @@
     <string name="screen_off_animation_title">Screen off animation</string>
 
     <!-- Battery Bar -->
-    <string name="battery_bar_title">Battery Bar</string>
     <string name="battery_bar_summary">Decorate battery bar</string>
     <string name="battery_bar_location">Battery bar location</string>
     <string name="battery_bar_color">Battery bar color</string>
@@ -672,7 +670,6 @@
     <string name="colt_google_plus_title">Google+</string>
     <string name="colt_google_plus_summary">Visit our G+ page for support and news</string>
     <!-- Changelog -->
-    <string name="changelog_colt_title">Changelog</string>
     <string name="changelog_colt_error">Unable to load changelog</string>
     <string name="changelog_colt_summary">Lets see what we have changed recently in ROM</string>
 		

@@ -85,8 +85,8 @@ public class LockscreenSettingsTabs extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new LockscreenMisc();
-			frags[1] = new LockscreenWidgets()
-            frags[2] = new WeatherSettings();			
+            frags[1] = new LockscreenWidgets();
+            frags[2] = new WeatherSettings();
         }
 
         @Override

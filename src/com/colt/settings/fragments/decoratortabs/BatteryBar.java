@@ -42,7 +42,7 @@ import com.colt.settings.preferences.SystemSettingSeekBarPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class BatterybarSettings extends SettingsPreferenceFragment implements
+public class BatteryBar extends SettingsPreferenceFragment implements
          OnPreferenceChangeListener {
 
     private static final String PREF_BATT_BAR = "battery_bar_list";

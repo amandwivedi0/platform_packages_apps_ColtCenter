@@ -31,7 +31,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.colt.settings.PagerSlidingTabStrip;
-import com.colt.settings.fragments.navbartabs.Navbar;
+import com.colt.settings.fragments.navbartabs.NavbarSettings;
 import com.colt.settings.fragments.navbartabs.EdgeGestures;
 
 public class NavbarSettingsTabs extends SettingsPreferenceFragment {

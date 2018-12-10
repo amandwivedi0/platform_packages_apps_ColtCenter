@@ -33,7 +33,7 @@ import com.android.internal.logging.nano.MetricsProto;
 
 //import com.citrus.settings.preference.SystemSettingSwitchPreference;
 
-public class ClockSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+public class ClockOptions extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
