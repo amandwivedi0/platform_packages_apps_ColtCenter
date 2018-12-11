@@ -20,11 +20,42 @@
          android:key="heads_up_notifications"
          android:title="@string/heads_up_notifications"
          android:fragment="com.colt.settings.fragments.notificationtabs.HeadsUpSettings" />
+
     <Preference
          android:key="charging_light"
          android:fragment="com.colt.settings.fragments.notificationtabs.BatteryLightSettings"
          android:title="@string/battery_light_settings" />
-		
+
+    <Preference
+         android:id="@+id/alarm_blocker"
+         android:title="@string/alarm_blocker"
+         android:summary="@string/alarm_blocker_summary"
+         android:fragment="com.colt.settings.fragments.notificationtabs.AlarmBlocker" />
+
+    <Preference
+         android:key="wakelock_blocker"
+         android:title="@string/wakelock_blocker_title"
+         android:summary="@string/wakelock_blocker_summary"
+         android:fragment="com.colt.settings.fragments.notificationtabs.WakeLockBlocker" />
+
+    <Preference
+         android:key="suspend_actions"
+         android:title="@string/screen_state_toggles_title" 
+         android:summary="@string/screen_state_toggles_summary_opt"
+         android:fragment="com.colt.settings.fragments.notificationtabs.SuspendActions" />
+
+    <com.colt.settings.preferences.GlobalSettingSwitchPreference
+             android:key="wake_when_plugged_or_unplugged"
+             android:title="@string/wakeup_when_plugged_unplugged_title"
+             android:summary="@string/wakeup_when_plugged_unplugged_summary"
+             android:defaultValue="true" />
+
+    <com.colt.settings.preferences.GlobalSettingSwitchPreference
+             android:key="allow_signature_fake"
+             android:title="@string/allow_signature_fake"
+             android:summary="@string/allow_signature_fake_summary"
+             android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
@@ -41,35 +72,5 @@
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="false" />
     </PreferenceCategory>
-	
-	  <com.colt.settings.preferences.GlobalSettingSwitchPreference
-             android:key="wake_when_plugged_or_unplugged"
-             android:title="@string/wakeup_when_plugged_unplugged_title"
-             android:summary="@string/wakeup_when_plugged_unplugged_summary"
-             android:defaultValue="true" />
-
-     <com.colt.settings.preferences.GlobalSettingSwitchPreference
-             android:key="allow_signature_fake"
-             android:title="@string/allow_signature_fake"
-             android:summary="@string/allow_signature_fake_summary"
-             android:defaultValue="false" />
-
-     <Preference
-         android:id="@+id/alarm_blocker"
-         android:title="@string/alarm_blocker"
-         android:summary="@string/alarm_blocker_summary"
-         android:fragment="com.colt.settings.fragments.notificationtabs.AlarmBlocker" />
-
-     <Preference
-         android:key="wakelock_blocker"
-         android:title="@string/wakelock_blocker_title"
-         android:summary="@string/wakelock_blocker_summary"
-         android:fragment="com.colt.settings.fragments.notificationtabs.WakeLockBlocker" />
-
-     <Preference
-         android:key="suspend_actions"
-         android:title="@string/screen_state_toggles_title" 
-         android:summary="@string/screen_state_toggles_summary_opt"
-         android:fragment="com.colt.settings.fragments.notificationtabs.SuspendActions" />
 			 
 </PreferenceScreen>
