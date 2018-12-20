@@ -354,4 +354,8 @@
     <string name="show_fourg_icon_title">4G icon</string>
     <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
        
+    <!-- Volume Panel on Left -->
+    <string name="volume_panel_on_left_title">Volume Panel on Left</string>
+    <string name="volume_panel_on_left_summary">Change volume panel from right side to left side</string>
+
 </resources>
