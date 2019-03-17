@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.tweaks.fragments;
+package com.colt.settings.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -37,7 +37,7 @@ import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-import com.dirtyunicorns.support.preferences.CustomSeekBarPreference;
+import com.colt.support.preferences.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
