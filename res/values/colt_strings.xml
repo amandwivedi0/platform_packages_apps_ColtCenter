@@ -1052,4 +1052,6 @@
 
     <!-- Custom Ambient Display -->
     <string name="ambient_display_screen_summary">Custom Ambient Display Configuration for ColtOS</string>
+
+    <string name="text_clock_font_size_title">Text Clock Size</string>
 </resources>
