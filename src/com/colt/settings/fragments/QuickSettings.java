@@ -88,7 +88,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
 	// QS Tile Animation
 	mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
-        int tileAnimationStyle = Settings.System.getIntForUser(getContentResolver(),
+        int tileAnimationStyle = Settings.System.getIntForUser(resolver,
                 Settings.System.ANIM_TILE_STYLE, 0, UserHandle.USER_CURRENT);
         mTileAnimationStyle.setValue(String.valueOf(tileAnimationStyle));
         updateTileAnimationStyleSummary(tileAnimationStyle);
@@ -96,14 +96,14 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
         mTileAnimationStyle.setOnPreferenceChangeListener(this);
         mTileAnimationDuration = (ListPreference) findPreference(PREF_TILE_ANIM_DURATION);
-        int tileAnimationDuration = Settings.System.getIntForUser(getContentResolver(),
+        int tileAnimationDuration = Settings.System.getIntForUser(resolver,
                 Settings.System.ANIM_TILE_DURATION, 2000, UserHandle.USER_CURRENT);
         mTileAnimationDuration.setValue(String.valueOf(tileAnimationDuration));
         updateTileAnimationDurationSummary(tileAnimationDuration);
         mTileAnimationDuration.setOnPreferenceChangeListener(this);
 
 	mTileAnimationInterpolator = (ListPreference) findPreference(PREF_TILE_ANIM_INTERPOLATOR);
-        int tileAnimationInterpolator = Settings.System.getIntForUser(getContentResolver(),
+        int tileAnimationInterpolator = Settings.System.getIntForUser(resolver,
                 Settings.System.ANIM_TILE_INTERPOLATOR, 0, UserHandle.USER_CURRENT);
         mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
@@ -138,10 +138,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             return true;
 	} else if (preference == mTileAnimationStyle) {
             int tileAnimationStyle = Integer.valueOf((String) newValue);
+            mTileAnimationDuration.setEnabled(tileAnimationStyle > 0);
+            mTileAnimationInterpolator.setEnabled(tileAnimationStyle > 0);
             Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_STYLE,
                     tileAnimationStyle, UserHandle.USER_CURRENT);
             updateTileAnimationStyleSummary(tileAnimationStyle);
-            updateAnimTileStyle(tileAnimationStyle);
             return true;
         } else if (preference == mTileAnimationDuration) {
             int tileAnimationDuration = Integer.valueOf((String) newValue);
@@ -149,7 +150,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                     tileAnimationDuration, UserHandle.USER_CURRENT);
             updateTileAnimationDurationSummary(tileAnimationDuration);
             return true;
-	} else if (preference == mTileAnimationInterpolator) {
+        } else if (preference == mTileAnimationInterpolator) {
             int tileAnimationInterpolator = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
