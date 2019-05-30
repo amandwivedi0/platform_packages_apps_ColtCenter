@@ -18,7 +18,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:coltsettings="http://schemas.android.com/apk/res-auto"
     android:title="@string/recent_app_sidebar_style_title">
 
     <com.colt.settings.preferences.SystemSettingSeekBarPreference
