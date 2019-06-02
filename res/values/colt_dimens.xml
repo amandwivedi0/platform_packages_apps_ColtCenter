@@ -31,4 +31,9 @@
     <!-- Colt tab indicator height -->
     <dimen name="colt_tab_indicator_height">5dp</dimen>
 
+    <!-- Bubble -->
+    <dimen name="bubble_tab_height">32dp</dimen>
+    <dimen name="bubble_top_bottom_padding">4dp</dimen>
+    <dimen name="bubble_corner_radius">16dp</dimen>
+    <dimen name="bubble_border_width">0.75dp</dimen>
 </resources>
