@@ -57,6 +57,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mRecentsClearAll;
     private SwitchPreference mClock; 
     private SwitchPreference mDate; 
+    private SwitchPreference mSlimToggle;
 
     private SharedPreferences mPreferences;
     private Context mContext;
@@ -80,6 +81,14 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
         mRecentsClearAllLocation.setValue(String.valueOf(location));
         mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
         mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+
+	mSlimToggle = (SwitchPreference) findPreference("use_slim_recents");
+        boolean enabled = Settings.System.getIntForUser(
+                resolver, Settings.System.USE_SLIM_RECENTS, 0,
+                UserHandle.USER_CURRENT) == 1;
+        mSlimToggle.setChecked(enabled);
+        mStockIconPacks.setEnabled(!enabled);
+        mSlimToggle.setOnPreferenceChangeListener(this);
 
 	// recents layout style
         mRecentsLayoutStylePref = (ListPreference) findPreference(RECENTS_LAYOUT_STYLE_PREF);
@@ -119,12 +128,21 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+	ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mRecentsClearAllLocation) {
 	    int value = Integer.parseInt((String) objValue);
             int index = mRecentsClearAllLocation.findIndexOfValue((String) objValue);
             Settings.System.putIntForUser(getActivity().getContentResolver(),
 		Settings.System.RECENTS_CLEAR_ALL_LOCATION, value, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
+            return true;
+	} else if (preference == mSlimToggle) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.USE_SLIM_RECENTS, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            mSlimToggle.setChecked(value);
+            mStockIconPacks.setEnabled(!value);
             return true;
 	} else if (preference == mRecentsLayoutStylePref) {
             int type = Integer.valueOf((String) objValue);
