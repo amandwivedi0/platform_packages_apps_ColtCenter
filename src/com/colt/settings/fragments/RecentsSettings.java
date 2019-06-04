@@ -87,7 +87,6 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
                 resolver, Settings.System.USE_SLIM_RECENTS, 0,
                 UserHandle.USER_CURRENT) == 1;
         mSlimToggle.setChecked(enabled);
-        mStockIconPacks.setEnabled(!enabled);
         mSlimToggle.setOnPreferenceChangeListener(this);
 
 	// recents layout style
@@ -142,7 +141,6 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
                     Settings.System.USE_SLIM_RECENTS, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mSlimToggle.setChecked(value);
-            mStockIconPacks.setEnabled(!value);
             return true;
 	} else if (preference == mRecentsLayoutStylePref) {
             int type = Integer.valueOf((String) objValue);

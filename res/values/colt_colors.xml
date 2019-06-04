@@ -3,7 +3,6 @@
     <color name="theme_accent">#ff009688</color>
     <color name="action_picker_fab_background">@color/theme_accent</color>
     <color name="icon_tint_color">@color/material_deep_teal_500</color>
-    <color name="white">#FFF</color>
 
     <color name="config_tab_color">@*android:color/secondary_device_default_settings</color>
     <color name="config_tab_text_color">@*android:color/secondary_text_default_material_dark</color>
@@ -17,5 +16,24 @@
     <color name="colt_tab_divider_color">@color/colt_tab_theme_accent</color>
     <!-- Colt tab ripple (not being used, overidden from layout -->
     <color name="background_tab_pressed_ripple">#AA000000</color>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">#398078</color>
+    <color name="colorAccent">#47A799</color>
+
+    <color name="icon_active_light">#3D3D3D</color>
+    <color name="icon_active_dark">#FFFFFF</color>
     
+    <!-- Blacks -->
+    <color name="black">#000000</color>
+    <color name="soft_black">#3D3D3D</color>
+    <color name="soft_shadow">#CCCCCC</color>
+
+    <!-- Whites -->
+    <color name="white">#ffffff</color>
+    <color name="semi_white">#DAFFFFFF</color>
+    <color name="grey_50">#FAFAFA</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_400">#BDBDBD</color>
+
 </resources>

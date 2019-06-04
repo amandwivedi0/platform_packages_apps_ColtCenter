@@ -40,8 +40,6 @@
         android:background="?android:attr/colorPrimary"
         app:pstsTabBackground="@drawable/bubble_background"
         app:pstsIndicatorHeight="@dimen/colt_tab_indicator_height"
-	app:pstIndicatorThickness="@dimen/bubble_tab_height"
-	app:pstIndicatorCornerRadius="@dimen/bubble_corner_radius"
         app:pstsIndicatorColor="@color/colt_tab_indicator_color"
         app:pstsUnderlineColor="@color/colt_tab_underline_color"
         app:pstsDividerColor="@color/colt_tab_divider_color"
