@@ -22,6 +22,13 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
+import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.os.SystemProperties;
+import com.android.internal.statusbar.IStatusBarService;
+import android.content.Context;
+import java.util.Arrays;
+import java.util.HashSet;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
@@ -34,6 +41,7 @@ public class StatusBarBattery extends SettingsPreferenceFragment implements
     private static final String SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String TEXT_CHARGING_SYMBOL = "text_charging_symbol";
+    private static final String BATTERY_ESTIMATE_POSITION_TYPE = "battery_estimate_position";
 
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 5;
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 6;
@@ -41,6 +49,9 @@ public class StatusBarBattery extends SettingsPreferenceFragment implements
     private ListPreference mStatusBarBatteryShowPercent;
     private ListPreference mStatusBarBattery;
     private ListPreference mTextSymbol;
+    private ListPreference mEstimatePositionType;
+
+    private IStatusBarService mStatusBarService;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +76,14 @@ public class StatusBarBattery extends SettingsPreferenceFragment implements
         mStatusBarBattery.setSummary(mStatusBarBattery.getEntry());
         enableStatusBarBatteryDependents(batteryStyle);
         mStatusBarBattery.setOnPreferenceChangeListener(this);
+
+	// battery estimate position
+        mEstimatePositionType = (ListPreference) findPreference(BATTERY_ESTIMATE_POSITION_TYPE);
+        int type = Settings.System.getInt(resolver,
+                Settings.System.BATTERY_ESTIMATE_POSITION, 0);
+        mEstimatePositionType.setValue(String.valueOf(type));
+        mEstimatePositionType.setSummary(mEstimatePositionType.getEntry());
+        mEstimatePositionType.setOnPreferenceChangeListener(this);
 
         mTextSymbol = (ListPreference) findPreference(TEXT_CHARGING_SYMBOL);
         int showTextSymbol = Settings.System.getInt(resolver,
@@ -97,6 +116,21 @@ public class StatusBarBattery extends SettingsPreferenceFragment implements
                     Settings.Secure.STATUS_BAR_BATTERY_STYLE, batteryStyle);
             mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
             enableStatusBarBatteryDependents(batteryStyle);
+            return true;
+	} else if (preference == mEstimatePositionType) {
+            int type = Integer.valueOf((String) newValue);
+            int index = mEstimatePositionType.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.BATTERY_ESTIMATE_POSITION, type);
+            mEstimatePositionType.setSummary(mEstimatePositionType.getEntries()[index]);
+            IStatusBarService statusBarService = IStatusBarService.Stub.asInterface(ServiceManager.checkService(Context.STATUS_BAR_SERVICE));
+            if (statusBarService != null) {
+                try {
+                    statusBarService.restartUI();
+                } catch (RemoteException e) {
+                    // do nothing.
+                }
+            }
             return true;
         } else if (preference == mTextSymbol) {
             int showTextSymbol = Integer.valueOf((String) newValue);

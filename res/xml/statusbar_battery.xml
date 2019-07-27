@@ -28,6 +28,19 @@
         android:entries="@array/status_bar_battery_percentage_entries"
         android:entryValues="@array/status_bar_battery_percentage_values" />
 
+    <com.colt.settings.preferences.SystemSettingSwitchPreference
+            android:key="show_battery_estimate"
+            android:title="@string/show_battery_estimate_title"
+            android:summary="@string/show_battery_estimate_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="battery_estimate_position"
+            android:title="@string/battery_estimate_position_title"
+            android:entries="@array/battery_estimate_position_entries"
+            android:entryValues="@array/battery_estimate_position_values"
+            android:defaultValue="0" />
+
     <!-- Text charging symbol -->
     <ListPreference
         android:key="text_charging_symbol"
