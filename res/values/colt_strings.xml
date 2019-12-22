@@ -78,6 +78,7 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <string name="default_string">Default</string>
   <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
@@ -596,7 +597,8 @@
     <string name="volte_icon_aex">AEX Icon</string>
     <string name="volte_icon_asus">Asus Icon</string>
     <string name="volte_icon_colt">Colt Icon</string>
-    <string name="volte_icon_oos">VoLTE OOS Icon</string>
+    <string name="volte_icon_oos">OOS Icon</string>
+    <string name="volte_icon_one">Android one Icon</string>
     <string name="volte_icon_hd">HD Icon</string>
     
 </resources>

@@ -97,7 +97,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
                     UserHandle.USER_CURRENT);
             return true;
 	} else if (preference == mUseOldMobileType) {
-            boolean value = (Boolean) newValue;
+            boolean value = (Boolean) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.USE_OLD_MOBILETYPE, value ? 1 : 0);
             return true;
