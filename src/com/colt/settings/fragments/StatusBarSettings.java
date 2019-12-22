@@ -34,8 +34,6 @@ import com.colt.settings.preference.CustomSeekBarPreference;
 import com.colt.settings.preference.SystemSettingSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.colt.ColtUtils;
-
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settings.R;
@@ -43,22 +41,13 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.colt.settings.preference.SystemSettingSeekBarPreference;
-import com.colt.settings.preference.SystemSettingSwitchPreference;
-
 public class StatusBarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
 
-    private static final String KEY_NETWORK_TRAFFIC = "network_traffic_location";
-    private static final String KEY_NETWORK_TRAFFIC_ARROW = "network_traffic_arrow";
-    private static final String KEY_NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide_threshold";
     private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
 
-    private ListPreference mNetworkTraffic;
-    private SystemSettingSwitchPreference mNetworkTrafficArrow;
-    private SystemSettingSeekBarPreference mNetworkTrafficAutohide;
     private SwitchPreference mUseOldMobileType;
     private boolean mConfigUseOldMobileType;
 
@@ -82,26 +71,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
         mThreshold.setValue(value);
         mThreshold.setOnPreferenceChangeListener(this);
         mThreshold.setEnabled(isNetMonitorEnabled);
-
-	mNetworkTraffic = (ListPreference) findPreference(KEY_NETWORK_TRAFFIC);
-        int networkTraffic = Settings.System.getInt(resolver,
-        Settings.System.NETWORK_TRAFFIC_LOCATION, 0);
-        CharSequence[] NonNotchEntries = { getResources().getString(R.string.network_traffic_disabled),
-                getResources().getString(R.string.network_traffic_statusbar),
-                getResources().getString(R.string.network_traffic_qs_header) };
-        CharSequence[] NotchEntries = { getResources().getString(R.string.network_traffic_disabled),
-                getResources().getString(R.string.network_traffic_qs_header) };
-        CharSequence[] NonNotchValues = {"0", "1" , "2"};
-        CharSequence[] NotchValues = {"0", "2"};
-        mNetworkTraffic.setEntries(Utils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
-        mNetworkTraffic.setEntryValues(Utils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
-        mNetworkTraffic.setValue(String.valueOf(networkTraffic));
-        mNetworkTraffic.setSummary(mNetworkTraffic.getEntry());
-        mNetworkTraffic.setOnPreferenceChangeListener(this);
-
-        mNetworkTrafficArrow = (SystemSettingSwitchPreference) findPreference(KEY_NETWORK_TRAFFIC_ARROW);
-        mNetworkTrafficAutohide = (SystemSettingSeekBarPreference) findPreference(KEY_NETWORK_TRAFFIC_AUTOHIDE);
-        updateNetworkTrafficPrefs(networkTraffic);
 
 	mConfigUseOldMobileType = getResources().getBoolean(com.android.internal.R.bool.config_useOldMobileIcons);
         int useOldMobileIcons = (!mConfigUseOldMobileType ? 1 : 0);
@@ -127,14 +96,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
                     UserHandle.USER_CURRENT);
             return true;
-	} else if (preference == mNetworkTraffic) {
-            int networkTraffic = Integer.valueOf((String) newValue);
-            int index = mNetworkTraffic.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_LOCATION, networkTraffic);
-            mNetworkTraffic.setSummary(mNetworkTraffic.getEntries()[index]);
-            updateNetworkTrafficPrefs(networkTraffic);
-            return true;
 	} else if (preference == mUseOldMobileType) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -144,17 +105,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
         return false;
     }
 
-    private void updateNetworkTrafficPrefs(int networkTraffic) {
-        if (mNetworkTraffic != null) {
-            if (networkTraffic == 0) {
-                mNetworkTrafficArrow.setEnabled(false);
-                mNetworkTrafficAutohide.setEnabled(false);
-            } else {
-                mNetworkTrafficArrow.setEnabled(true);
-                mNetworkTrafficAutohide.setEnabled(true);
-            }
-        }
-    }
 
 @Override
     public int getMetricsCategory() {
