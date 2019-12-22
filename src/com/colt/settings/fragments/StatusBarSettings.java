@@ -30,6 +30,9 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
+import com.colt.settings.preference.CustomSeekBarPreference;
+import com.colt.settings.preference.SystemSettingSwitchPreference;
+
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.colt.ColtUtils;
 
@@ -44,6 +47,9 @@ import com.colt.settings.preference.SystemSettingSeekBarPreference;
 import com.colt.settings.preference.SystemSettingSwitchPreference;
 
 public class StatusBarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private CustomSeekBarPreference mThreshold;
+    private SystemSettingSwitchPreference mNetMonitor;
 
     private static final String KEY_NETWORK_TRAFFIC = "network_traffic_location";
     private static final String KEY_NETWORK_TRAFFIC_ARROW = "network_traffic_arrow";
@@ -64,6 +70,19 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
         PreferenceScreen prefSet = getPreferenceScreen();
 	final ContentResolver resolver = getActivity().getContentResolver();
 
+        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
+        mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
+        mNetMonitor.setChecked(isNetMonitorEnabled);
+        mNetMonitor.setOnPreferenceChangeListener(this);
+
+        int value = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
+        mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
+        mThreshold.setValue(value);
+        mThreshold.setOnPreferenceChangeListener(this);
+        mThreshold.setEnabled(isNetMonitorEnabled);
+
 	mNetworkTraffic = (ListPreference) findPreference(KEY_NETWORK_TRAFFIC);
         int networkTraffic = Settings.System.getInt(resolver,
         Settings.System.NETWORK_TRAFFIC_LOCATION, 0);
@@ -74,8 +93,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
                 getResources().getString(R.string.network_traffic_qs_header) };
         CharSequence[] NonNotchValues = {"0", "1" , "2"};
         CharSequence[] NotchValues = {"0", "2"};
-        mNetworkTraffic.setEntries(ColtUtils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
-        mNetworkTraffic.setEntryValues(ColtUtils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
+        mNetworkTraffic.setEntries(Utils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
+        mNetworkTraffic.setEntryValues(Utils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
         mNetworkTraffic.setValue(String.valueOf(networkTraffic));
         mNetworkTraffic.setSummary(mNetworkTraffic.getEntry());
         mNetworkTraffic.setOnPreferenceChangeListener(this);
@@ -93,8 +112,22 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
    }
 
  @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-	if (preference == mNetworkTraffic) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+	if (preference == mNetMonitor) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            mNetMonitor.setChecked(value);
+            mThreshold.setEnabled(value);
+            return true;
+        } else if (preference == mThreshold) {
+            int val = (Integer) objValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
+                    UserHandle.USER_CURRENT);
+            return true;
+	} else if (preference == mNetworkTraffic) {
             int networkTraffic = Integer.valueOf((String) newValue);
             int index = mNetworkTraffic.findIndexOfValue((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
