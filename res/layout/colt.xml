@@ -25,17 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:paddingTop="10dp"
-            android:background="#33CFCFCF"
-            android:src="@drawable/colt_logo"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
